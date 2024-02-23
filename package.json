@@ -1,6 +1,6 @@
 {
-  "name": "pratica1ads",
-  "version": "1.0.0",
+  "name": "pratica1ads-main",
+  "version": "1.0.1-rc2",
   "description": "Repositorio para a pratica1",
   "main": "index.js",
   "scripts": {
