@@ -8,7 +8,7 @@ function adicionarContato(nome, email, telefone) {
 }
 
 function listarContatos() {
-    contatos.forEach((c) => console.log(c.toString()));
+    return contatos;
 }
 
 function buscarContato(nome) {

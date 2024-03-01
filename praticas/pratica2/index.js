@@ -21,7 +21,9 @@ function escolherOpcao() {
             break;
         }
         case "2":
-            controller.listarContatos();
+            controller
+                .listarContatos()
+                .forEach((c) => console.log(c.toString()));
             break;
         case "3": {
             const nome = readline.question("Nome: ");
