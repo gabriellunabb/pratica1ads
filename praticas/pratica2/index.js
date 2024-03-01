@@ -13,25 +13,37 @@ function menu() {
 function escolherOpcao() {
     const opcao = readline.question("Entre com a opcao: ");
     switch (opcao) {
-        case "1":
-            controller.adicionarContato();
+        case "1": {
+            const nome = readline.question("Nome: ");
+            const email = readline.question("Email: ");
+            const telefone = readline.question("Telefone: ");
+            controller.adicionarContato(nome, email, telefone);
             break;
+        }
         case "2":
             controller.listarContatos();
             break;
-        case "3":
-            controller.buscarContato();
+        case "3": {
+            const nome = readline.question("Nome: ");
+            controller.buscarContato(nome);
             break;
-        case "4":
-            controller.atualizarContato();
+        }
+        case "4": {
+            const nome = readline.question("Nome: ");
+            const novoEmail = readline.question("Novo email: ");
+            const novoTelefone = readline.question("Novo telefone: ");
+            controller.atualizarContato(nome, novoEmail, novoTelefone);
             break;
-        case "5":
-            controller.removerContato();
+        }
+        case "5": {
+            const nome = readline.question("Nome: ");
+            controller.removerContato(nome);
             break;
+        }
         case "6":
             process.exit(0);
         default:
-            console.log("tente novamente ");
+            console.log("Tente novamente!");
             break;
     }
 }
@@ -40,6 +52,7 @@ function main() {
     while (true) {
         menu();
         escolherOpcao();
+        readline.question("Pressione ENTER para continuar...");
     }
 }
 
